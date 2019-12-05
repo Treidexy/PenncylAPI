@@ -27,6 +27,19 @@ public class file {
 		}
 	}
 	
+	public static void set(String text, String file_name) {
+		try {
+			File f = new File(file_name);
+			FileWriter fw = new FileWriter(f);
+			fw.write(text);
+			fw.flush();
+			fw.close();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
 	public static String read (String file_name) {
 		try {
 			File f = new File(file_name);
